@@ -1,0 +1,45 @@
+/*
+* buttons base
+*/
+$ubtn-bgcolor: #EEE !default;
+$ubtn-font-color: #666 !default;
+$ubtn-font-weight: 300 !default;
+$ubtn-font-size: 16px !default;
+$ubtn-height: 40px !default;
+$ubtn-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif  !default;
+
+/*
+* buttons colors
+*/
+$ubtn-colors: (
+	primary: #1B9AF7  #FFF,
+	plain: #FFF #1B9AF7,
+	inverse: #222 #EEE,
+	action: #A5DE37  #FFF,
+	highlight: #FEAE1B #FFF,
+	caution: #FF4351 #FFF,
+	royal: #7B72E9 #FFF
+) !default;
+
+/*
+* buttons shapes
+*/
+$ubtn-shapes: (
+  square: 0,
+  box: 10px,
+  rounded: 3px,
+  pill: 200px,
+  circle: 100%
+) !default;
+
+/*
+* buttons sizes
+*/
+$ubtn-sizes: (
+  giant: 2,
+  jumbo: 1.5,
+  large: 1.25,
+  default: 1,
+  small: .75,
+  tiny: .5
+) !default;

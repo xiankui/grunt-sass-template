@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/*
+*  like http://meyerweb.com/eric/tools/css/reset/
+*/
+/*  reset */
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, li, dl, dt, dd, form, fieldset, legend, input, textarea, button, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  border: 0;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/*  base font  */
+/*  base color  */
+/*  base link  */
+/*  base btn  */
+/*  useful mixin  */
+.container {
+  *zoom: 1;
+}
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+
+.fixedTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1000;
+  display: none;
+}
+
+.fixedTop h1 {
+  padding: 0 25px;
+  text-align: center;
+}
+
+.fixedTop a {
+  margin-top: -44px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.fixedTop .fallback {
+  float: left;
+  margin-left: 10px;
+  padding-left: 20px;
+  background: url(http://j5.dfcfw.com/image/201410/20141030150553.png) no-repeat 0 50%;
+  -webkit-background-size: auto 22px;
+  -moz-background-size: auto 22px;
+  -ms-background-size: auto 22px;
+  -o-background-size: auto 22px;
+  background-size: auto 22px;
+  color: #fff;
+  text-indent: -9999px;
+}
+
+.fixedTop .share {
+  float: right;
+  margin-right: 10px;
+  padding-right: 22px;
+  height: 44px;
+  background: url(http://j5.dfcfw.com/image/201410/20141030150619.png) no-repeat 100% 50%;
+  -webkit-background-size: auto 22px;
+  -moz-background-size: auto 22px;
+  -ms-background-size: auto 22px;
+  -o-background-size: auto 22px;
+  background-size: auto 22px;
+  text-indent: -9999px;
+  display: none;
+}
+
+.fixBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background-color: #3b2e3e;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.fixBottom a {
+  float: left;
+  width: 50%;
+  line-height: 44px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fixBottom a span {
+  display: inline-block;
+  padding-left: 44px;
+}
+
+.fixBottom a:first-child span {
+  background: url(../images/icon-help.png) no-repeat 0 50%;
+  -webkit-background-size: auto 50%;
+  -moz-background-size: auto 50%;
+  -ms-background-size: auto 50%;
+  -o-background-size: auto 50%;
+  background-size: auto 50%;
+}
+
+.fixBottom a:last-child span {
+  background: url(../images/icon-reward.png) no-repeat 0 50%;
+  -webkit-background-size: auto 50%;
+  -moz-background-size: auto 50%;
+  -ms-background-size: auto 50%;
+  -o-background-size: auto 50%;
+  background-size: auto 50%;
+}
+
+.fixBottom a:first-child .line {
+  display: block;
+  width: 1px;
+  background-color: #4f4352;
+  height: 44px;
+  float: right;
+}
+
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*/
+.price {
+  position: relative;
+}
+.price:before {
+  content: '$';
+  position: relative;
+  left: 0;
+}
+
+.USD .price:before {
+  content: '$';
+}
+
+.EUR .price:before {
+  content: '\20AC';
+}
+
+.ILS .price:before {
+  content: '\20AA';
+}
+
+.GBP .price:before {
+  content: '\00A3';
+}
+
+/*
+* Clearfix
+*/
+.container {
+  *zoom: 1;
+}
+.container:after {
+  content: '';
+  display: table;
+  line-height: 0;
+  clear: both;
+}
+
+/*
+* Respond To
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+*/
+/*
+* Animation
+*/
+/*
+* Alerted
+*/
+@-webkit-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold;
+  }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1);
+  }
+}
+@-moz-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold;
+  }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1);
+  }
+}
+@keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold;
+  }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1);
+  }
+}
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker L煤cio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #f00;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+body {
+  font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #dfdfdf;
+}
+@media (max-width: 720px) {
+  body {
+    background-color: #d2d2d2;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: #c6c6c6;
+  }
+}
+
+main {
+  width: 60%;
+  margin-right: 5%;
+  margin-left: 35%;
+}
+
+.rotate {
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  background-color: #000;
+  -webkit-animation: slidedown 2s 3;
+  -moz-animation: slidedown 2s 3;
+  -ms-animation: slidedown 2s 3;
+  -o-animation: slidedown 2s 3;
+  animation: slidedown 2s 3;
+}
+@-webkit-keyframes slidedown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes slidedown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes slidedown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes slidedown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+aside {
+  width: 25%;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.demo {
+  position: relative;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+}
+.demo:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: .1px;
+}
+.demo .ver-middle {
+  background-color: #aaa;
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+  vertical-align: middle;
+}
+
+.trangle {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 8px solid #222;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.alerted:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  background-color: gold;
+}
+.alerted:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: solid gold;
+  border-width: 2px;
+  box-sizing: border-box;
+  -webkit-animation: alertMe 1000ms infinite ease 0ms;
+  -moz-animation: alertMe 1000ms infinite ease 0ms;
+  -o-animation: alertMe 1000ms infinite ease 0ms;
+  animation: alertMe 1000ms infinite ease 0ms;
+}
+
+.tooltip-label {
+  position: relative;
+  position: relative;
+}
+.tooltip-label:before, .tooltip-label:after {
+  display: none;
+  z-index: 98;
+}
+.tooltip-label:hover:after {
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  padding: 3px 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  background-color: #222;
+}
+.tooltip-label:hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 6px solid #222;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  top: -2px;
+  margin-top: 0;
+  left: 47%;
+}
+.tooltip-label:hover:after {
+  top: -28px;
+  left: 47%;
+  margin-left: -20px;
+}
+
+/*# sourceMappingURL=main.css.map */

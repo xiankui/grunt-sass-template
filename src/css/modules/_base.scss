@@ -1,0 +1,121 @@
+
+/*  base font  */
+$base-font: 100%/1 Verdana,Tahoma,Helvetica,Arial,sans-serif;
+$base-font-family: Verdana,Tahoma,Helvetica,Arial,sans-serif;
+$base-font-size: 100%;
+$base-line-height: 1;
+
+/*  base color  */
+$base-color: #333;
+$base-bg-color: #dfdfdf;
+$brand-color: #f00;
+$brand-80-color: rgba($brand-color, 0.8);
+$accent-color: #ffff00;
+
+/*  base link  */
+$base-link-color: $base-color $brand-color;
+
+/*  base btn  */
+$base-btn: (primary #0078E7 #fff) (blue #00A3CF #fff) (orange #F47837 #fff);
+
+
+/*  useful mixin  */
+// css3 
+@mixin css3($property, $value) {
+	@each $prefix in (-webkit-, -moz-, -ms-, -o-, '') {
+		#{$prefix}#{$property}: $value;
+	}
+}
+
+// animations and keyframes
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// breakpoint 
+$tablet: 1024px;   // 720--1024; 1024--
+$medium-phone: 720px; // 400--720
+$smart-phone: 400px;  // 320--400
+@mixin breakpoint($point) {
+	@if $point == large {
+		@media (min-width: $tablet) {
+			@content;
+		}
+	}
+	@else if $point == medium {
+		@media (max-width: $medium-phone) {
+			@content;  // base 400px
+		}
+	}
+	@else if $point == small {
+		@media (max-width: $smart-phone) {
+			@content;  // base 320px
+		}
+	}
+}
+
+// retina image
+@mixin image-2x($img, $w:false, $h:false) {
+	@media  (-moz-min-device-pixel-ratio: 1.5),
+			(-o-min-device-pixel-ratio: 1.5),
+			(-webkit-min-device-pixel-ratio: 1.5),
+			(min-device-pixel-ratio: 1.5),
+			(min-resolution: 1.5dppx) {
+				background-image: url($img);
+				@if ($w) {
+					background-size: $w $h;	
+				}	
+			}
+}
+
+// clear fix
+%clearfix {
+	*zoom:1;
+	&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+		clear:both;
+	}
+}
+
+// hide-text
+%hide-text {
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+// black and white
+@function black($opacity) {
+	@return rgba(0,0,0,$opacity);
+}
+@function white($opacity) {
+	@return rgba(255,255,255,$opacity);
+}
+
+// box-emboss
+@mixin box-emboss($opacity1, $opacity2) {
+	box-shadow: white($opacity1) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
