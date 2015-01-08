@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+
 package.json is the first step:
 	write package.json file.
 	it will like this:
+	
 		{
 		  "name": "app",
 		  "version": "1.0.0"
 		}
+		
 	then, get grunt and nessary grunt contribute plugs.
 	the common use like this:
+	
 		>npm install grunt --save-dev
 		>npm install grunt-contrib-watch --save-dev
 		>npm install grunt-contrib-sass --save-dev
@@ -19,6 +23,7 @@ package.json is the first step:
 		>npm install grunt-contrib-imagemin --save-dev
 
 Gruntfile.js is the config that you define to run grunt task for what you want!
+
 		>grunt compile (when you are working, run this command) 
 			this command will run watch task that you had config,
 			complie .scss file to .css file,
